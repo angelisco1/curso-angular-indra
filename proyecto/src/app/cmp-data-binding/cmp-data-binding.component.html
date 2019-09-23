@@ -1,0 +1,18 @@
+<h2>Data Binding</h2>
+<h3>String Interpolation</h3>
+<p>Me llamo: {{nombre}}</p>
+<p>Me llamo: {{nombre != "" ? nombre : 'No lo se'}}</p>
+
+<h3>Property Binding</h3>
+<input type="text" [value]="nombre" [disabled]="!modoEdicion">
+<!--
+<input type="text" value="{{nombre}}">
+-->
+
+<h3>Event Binding</h3>
+<input type="text" [value]="nombre" (input)="cambiarNombre($event)">
+
+<h3>Two-Way Binding</h3>
+<input type="text" [(ngModel)]="nombre" (click)="muestraMsg()">
+
+<h3>Referencias</h3>
