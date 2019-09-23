@@ -18,8 +18,9 @@ export class CmpDataBindingComponent implements OnInit {
     this.modoEdicion = false;
   }
 
-  muestraMsg() {
-    console.log('eeeeei')
+  muestraMsg(msg) {
+    alert(msg)
+    //console.log(msg)
   }
 
   cambiarNombre(event) {

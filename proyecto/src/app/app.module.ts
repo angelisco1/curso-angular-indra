@@ -7,6 +7,9 @@ import { MiPrimerComponenteComponent } from './mi-primer-componente/mi-primer-co
 import { ErrorComponent } from './error.component';
 import { CardComponent } from './card/card.component';
 import { CmpDataBindingComponent } from './cmp-data-binding/cmp-data-binding.component';
+import { CmpComunicacionComponentesComponent } from './cmp-comunicacion-componentes/cmp-comunicacion-componentes.component';
+import { CmpAComponent } from './cmp-comunicacion-componentes/cmp-a/cmp-a.component';
+import { CmpBComponent } from './cmp-comunicacion-componentes/cmp-b/cmp-b.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { CmpDataBindingComponent } from './cmp-data-binding/cmp-data-binding.com
     MiPrimerComponenteComponent,
     ErrorComponent,
     CardComponent,
-    CmpDataBindingComponent
+    CmpDataBindingComponent,
+    CmpComunicacionComponentesComponent,
+    CmpAComponent,
+    CmpBComponent
   ],
   imports: [
     BrowserModule,

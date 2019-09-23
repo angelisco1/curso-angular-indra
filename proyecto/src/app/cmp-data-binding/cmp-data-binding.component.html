@@ -16,3 +16,9 @@
 <input type="text" [(ngModel)]="nombre" (click)="muestraMsg()">
 
 <h3>Referencias</h3>
+<input type="text" #inputMsg>
+<button type="button" (click)="muestraMsg(inputMsg.value)">Mostrar alerta</button>
+
+<audio src="ruta_archivo_mp3" #audio></audio>
+<button (click)="audio.play()">Play</button>
+<button (click)="audio.pause()">Pause</button>
