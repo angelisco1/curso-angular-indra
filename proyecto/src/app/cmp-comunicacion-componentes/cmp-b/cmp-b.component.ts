@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cmp-b',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cmp-b.component.css']
 })
 export class CmpBComponent implements OnInit {
-
+  @Input() miNombre = ''
+  @Input() nombreHermano = ''
   constructor() { }
 
   ngOnInit() {

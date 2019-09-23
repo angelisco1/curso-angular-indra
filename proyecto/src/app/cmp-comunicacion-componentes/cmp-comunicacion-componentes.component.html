@@ -1,3 +1,4 @@
 <h2>CMP Padre</h2>
-<app-cmp-a [miNombre]="nombreA"></app-cmp-a>
-<app-cmp-b></app-cmp-b>
+<input type="text" [(ngModel)]="nombreA">
+<app-cmp-a [miNombre]="nombreA" (nombreCambiado)="nombreA=$event"></app-cmp-a>
+<app-cmp-b [miNombre]="nombreB" [nombreHermano]="nombreA"></app-cmp-b>

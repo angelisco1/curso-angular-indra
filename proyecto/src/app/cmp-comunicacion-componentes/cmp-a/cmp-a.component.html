@@ -1,2 +1,5 @@
 <h3>CMP A</h3>
+<!--<input type="text" [(ngModel)]="miNombre">-->
+<input type="text" (change)="avisarCambio($event.target.value)">
+
 <p>Me llamo: {{miNombre}}</p>
