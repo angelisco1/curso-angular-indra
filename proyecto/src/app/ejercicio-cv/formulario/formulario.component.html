@@ -1,0 +1,13 @@
+<h3>Form CV</h3>
+<div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" [value]="nombre_form" (input)="cambiarDatos($event.target)">
+</div>
+<div>
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" name="apellidos" [value]="apellidos_form" (input)="cambiarDatos($event.target)">
+</div>
+<div>
+    <label for="skills">Skills:</label>
+    <input type="text" name="skills" (change)="addSkill($event)">
+</div>

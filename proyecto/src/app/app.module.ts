@@ -10,6 +10,10 @@ import { CmpDataBindingComponent } from './cmp-data-binding/cmp-data-binding.com
 import { CmpComunicacionComponentesComponent } from './cmp-comunicacion-componentes/cmp-comunicacion-componentes.component';
 import { CmpAComponent } from './cmp-comunicacion-componentes/cmp-a/cmp-a.component';
 import { CmpBComponent } from './cmp-comunicacion-componentes/cmp-b/cmp-b.component';
+import { EjercicioCvComponent } from './ejercicio-cv/ejercicio-cv.component';
+import { FormularioComponent } from './ejercicio-cv/formulario/formulario.component';
+import { CvComponent } from './ejercicio-cv/cv/cv.component';
+import { CmpPipesComponent } from './cmp-pipes/cmp-pipes.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { CmpBComponent } from './cmp-comunicacion-componentes/cmp-b/cmp-b.compon
     CmpDataBindingComponent,
     CmpComunicacionComponentesComponent,
     CmpAComponent,
-    CmpBComponent
+    CmpBComponent,
+    EjercicioCvComponent,
+    FormularioComponent,
+    CvComponent,
+    CmpPipesComponent
   ],
   imports: [
     BrowserModule,
