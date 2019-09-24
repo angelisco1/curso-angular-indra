@@ -11,6 +11,13 @@ export class CmpPipesComponent implements OnInit {
   precio: number = 12;
   hoy: Date = new Date();
   mascotas: Array<string> = ['Pez', 'Periquito', 'Tortuga']
+  txtFiltro: string = 'P';
+  mensaje = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log('Ya tengo mis datos')
+        resolve('Esto son los datos');
+    }, 2000)
+  })
 
   constructor() { }
 

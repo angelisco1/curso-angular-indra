@@ -14,6 +14,10 @@ import { EjercicioCvComponent } from './ejercicio-cv/ejercicio-cv.component';
 import { FormularioComponent } from './ejercicio-cv/formulario/formulario.component';
 import { CvComponent } from './ejercicio-cv/cv/cv.component';
 import { CmpPipesComponent } from './cmp-pipes/cmp-pipes.component';
+import { DoblePipe } from './cmp-pipes/doble.pipe';
+import { ReversePipe } from './cmp-pipes/reverse.pipe';
+import { HidePipe } from './cmp-pipes/hide.pipe';
+import { FiltroPipe } from './cmp-pipes/filtro.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { CmpPipesComponent } from './cmp-pipes/cmp-pipes.component';
     EjercicioCvComponent,
     FormularioComponent,
     CvComponent,
-    CmpPipesComponent
+    CmpPipesComponent,
+    DoblePipe,
+    ReversePipe,
+    HidePipe,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,

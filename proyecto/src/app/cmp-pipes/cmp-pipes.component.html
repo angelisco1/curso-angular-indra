@@ -1,5 +1,8 @@
-<h2>Pipes</h2>
+<h2>Pipes puros</h2>
 <p>{{texto}}</p>
+<p>{{texto | hide:['poo','ta']}}</p>
+<p>{{texto | hide:['poo','ta']:'-'}}</p>
+<p>{{texto | reverse}}</p>
 <p>{{texto | uppercase}}</p>
 <p>{{texto | lowercase}}</p>
 <p>{{texto | slice:4:9}}</p>
@@ -7,6 +10,27 @@
 <p>Precio: {{precio | currency}}</p>
 <p>Precio: {{precio | currency:'EUR'}}</p>
 <p>Precio: {{precio | currency:'GBP'}}</p>
+<p>Precio: {{precio | doble}}</p>
+<p>Precio: {{precio | doble | currency:'EUR'}}</p>
+<p>Precio: {{precio | doble:3}}</p>
+<p>Precio: {{precio | doble:3:4}}</p>
+<p>Precio: {{precio | doble:3:4:7:9:2}}</p>
+<!-- <p>Precio: {{precio | currency:'EUR'}}</p> -->
 <p>Hoy: {{hoy}}</p>
 <p>Hoy: {{hoy | date}}</p>
 <p>Hoy: {{hoy | date:'dd/MM/yyyy'}}</p>
+
+<h2>Pipe impuro</h2>
+<input type="text" #nuevaMascota>
+<button (click)="mascotas = mascotas.concat(nuevaMascota.value)">Add mascota</button>
+<button (click)="mascotas.push(nuevaMascota.value)">Add mascota</button>
+<input type="text" [(ngModel)]="txtFiltro">
+<ul>
+    <li *ngFor="let mascota of mascotas | filtro:txtFiltro">{{mascota}}</li>
+</ul>
+<ul>
+    <li *ngFor="let mascota of mascotas">{{mascota}}</li>
+</ul>
+
+<h2>Pipe asincrono</h2>
+<p>Mensaje: {{mensaje | async}}</p>
