@@ -8,9 +8,14 @@
 <!--
 <input type="text" value="{{nombre}}">
 -->
+<img src="http://fr.web.img6.acsta.net/c_215_290/pictures/17/07/10/13/28/128744.jpg" alt="">
+
+
+
 
 <h3>Event Binding</h3>
 <input type="text" [value]="nombre" (input)="cambiarNombre($event)">
+
 
 <h3>Two-Way Binding</h3>
 <input type="text" [(ngModel)]="nombre" (click)="muestraMsg()">
