@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { DatosService } from 'src/app/cmp-servicios/datos.service';
 
 @Component({
   selector: 'app-cmp-a',
@@ -8,10 +9,14 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class CmpAComponent implements OnInit {
   @Output() nombreCambiado = new EventEmitter<string>();
   @Input() miNombre = 'Sansa';
+  datoRecibido: string = ''
 
-  constructor() { }
+  constructor(private datosServ: DatosService) { }
 
   ngOnInit() {
+    this.datosServ.datoEnviado.subscribe((dato) => {
+      this.datoRecibido = dato;
+    })
   }
 
   muestraEvento(e) {
