@@ -1,0 +1,20 @@
+<h2>Formulario</h2>
+<div>
+  <div>
+    <label for="">Texto arriba</label>
+    <input type="text" [(ngModel)]="meme.textoArriba">
+  </div>
+  <div>
+    <label for="">Texto abajo</label>
+    <input type="text" [(ngModel)]="meme.textoAbajo">
+  </div>
+  <div>
+    <label for="">Imagen</label>
+    <input type="text" [(ngModel)]="meme.imagenUrl">
+  </div>
+  <div>
+    <label for="">Color</label>
+    <input type="color" [(ngModel)]="meme.color">
+  </div>
+</div>
+<button type="button" (click)="guardar()">Guardar</button>
