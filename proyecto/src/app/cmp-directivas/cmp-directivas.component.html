@@ -1,0 +1,10 @@
+<h2>Directivas</h2>
+<h3>De atributo</h3>
+<input type="text" [(ngModel)]="colorLetra">
+<p [ngStyle]="{color: 'blue', textDecoration: 'line-through'}">Texto azul y tachado</p>
+<p [ngStyle]="{color: colorLetra}">Texto del color: {{colorLetra}}</p>
+<p [ngClass]="{letraAmarilla: activado, fondoNegro: activado}">Texto amarillo y fondo negro</p>
+<input type="checkbox" [(ngModel)]="activado">
+<input type="checkbox" [checked]="activado">
+
+

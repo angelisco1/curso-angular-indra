@@ -9,7 +9,7 @@ export class CmpDataBindingComponent implements OnInit {
   // Tipos: string, number, boolean, any, Array<number>, Array<string>, Animal
   nombre: string;
   modoEdicion: boolean;
-  imagen: string;
+  imagen: string
 
   constructor() { }
 

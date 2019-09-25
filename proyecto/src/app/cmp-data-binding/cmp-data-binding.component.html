@@ -16,6 +16,7 @@
 <input type="text" [value]="nombre" (input)="cambiarNombre($event)">
 <button type="button" (click)="muestraMsg('Hola a todxs')" (mouseleave)="muestraMsg('Has pasado el ratón por encima')">Saludar</button>
 
+
 <h3>Two-Way Binding</h3>
 <input type="text" [(ngModel)]="nombre" (click)="muestraMsg()">
 <input type="text" [ngModel]="nombre" (click)="muestraMsg()">
