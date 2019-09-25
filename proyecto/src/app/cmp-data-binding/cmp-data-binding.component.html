@@ -8,17 +8,23 @@
 <!--
 <input type="text" value="{{nombre}}">
 -->
+<img src="http://fr.web.img6.acsta.net/c_215_290/pictures/17/07/10/13/28/128744.jpg" alt="">
+<img src="imagen" alt="">
+<img [src]="imagen" alt="">
 
 <h3>Event Binding</h3>
 <input type="text" [value]="nombre" (input)="cambiarNombre($event)">
+<button type="button" (click)="muestraMsg('Hola a todxs')" (mouseleave)="muestraMsg('Has pasado el ratón por encima')">Saludar</button>
 
 <h3>Two-Way Binding</h3>
 <input type="text" [(ngModel)]="nombre" (click)="muestraMsg()">
+<input type="text" [ngModel]="nombre" (click)="muestraMsg()">
 
 <h3>Referencias</h3>
 <input type="text" #inputMsg>
 <button type="button" (click)="muestraMsg(inputMsg.value)">Mostrar alerta</button>
 
-<audio src="../../assets/sonido-piolin.m4a" #audio></audio>
+<audio id="mi-audio" src="../../assets/sonido-piolin.m4a" #audio></audio>
+<!-- document.getElementById('mi-audio').play() -->
 <button (click)="audio.play()">Play</button>
 <button (click)="audio.pause()">Pause</button>

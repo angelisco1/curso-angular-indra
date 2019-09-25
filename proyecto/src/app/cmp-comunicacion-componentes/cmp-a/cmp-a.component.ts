@@ -14,8 +14,13 @@ export class CmpAComponent implements OnInit {
   ngOnInit() {
   }
 
+  muestraEvento(e) {
+    console.log(e);
+  }
+
   avisarCambio(nuevoNombre) {
     this.nombreCambiado.emit(nuevoNombre)
+    // this.miNombre = nuevoNombre;
   }
 
 }
