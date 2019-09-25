@@ -3,8 +3,27 @@
 <input type="text" [(ngModel)]="colorLetra">
 <p [ngStyle]="{color: 'blue', textDecoration: 'line-through'}">Texto azul y tachado</p>
 <p [ngStyle]="{color: colorLetra}">Texto del color: {{colorLetra}}</p>
-<p [ngClass]="{letraAmarilla: activado, fondoNegro: activado}">Texto amarillo y fondo negro</p>
+<p [ngClass]="{fondoNegro: activado}" class="letraAmarilla">Texto amarillo y fondo negro</p>
 <input type="checkbox" [(ngModel)]="activado">
 <input type="checkbox" [checked]="activado">
 
+<p appMarcar>Mi directiva</p>
+<p appMarcar="blue">Mi directiva</p>
+<p [appMarcar]="colorLetra">Mi directiva</p>
 
+<h3>Estructurales</h3>
+<p *ngIf="activado" appBlink>Mi directiva</p>
+
+<ul>
+  <li *ngFor="let color of colores; let pos = index">{{pos}}: {{color}}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let item of serie | keyvalue"><strong>{{item.key | titlecase}}:</strong> {{item.value}}</li>
+</ul>
+
+<div [ngSwitch]="miMascota">
+  <p *ngSwitchCase="'gato'">Tengo un gato</p>
+  <p *ngSwitchCase="'perro'">Tengo un perro</p>
+  <p *ngSwitchDefault>Tengo otra mascota</p>
+</div>

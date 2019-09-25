@@ -20,6 +20,7 @@ import { HidePipe } from './cmp-pipes/hide.pipe';
 import { FiltroPipe } from './cmp-pipes/filtro.pipe';
 import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.component';
 import { MarcarDirective } from './cmp-directivas/marcar.directive';
+import { BlinkDirective } from './cmp-directivas/blink.directive';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MarcarDirective } from './cmp-directivas/marcar.directive';
     HidePipe,
     FiltroPipe,
     CmpDirectivasComponent,
-    MarcarDirective
+    MarcarDirective,
+    BlinkDirective
   ],
   imports: [
     BrowserModule,

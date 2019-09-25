@@ -8,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class CmpDirectivasComponent implements OnInit {
   colorLetra: string = 'black';
   activado: boolean = true;
-  
+  colores = ['azul', 'amarillo', 'rojo'];
+  serie = {
+    titulo: 'Fear The Walking Dead',
+    temporadas: 5,
+    capitulos: 100
+  }
+  miMascota = 'periquito'
+
   constructor() { }
 
   ngOnInit() {
