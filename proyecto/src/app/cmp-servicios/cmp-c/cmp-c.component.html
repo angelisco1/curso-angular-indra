@@ -1,0 +1,9 @@
+<h3>CMP C</h3>
+<input type="text" #inputDato>
+<button type="button" (click)="guardar(inputDato.value)">Guardar dato</button>
+<button type="button" (click)="enviar(inputDato.value)">Guardar dato</button>
+
+<hr>
+<ul>
+  <li *ngFor="let dato of datos">{{dato}}</li>
+</ul>

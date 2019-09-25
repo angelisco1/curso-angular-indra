@@ -1,0 +1,24 @@
+import { Component, OnInit } from '@angular/core';
+import { DatosService } from '../datos.service';
+
+@Component({
+  selector: 'app-cmp-d',
+  templateUrl: './cmp-d.component.html',
+  styleUrls: ['./cmp-d.component.css']
+})
+export class CmpDComponent implements OnInit {
+  datos = [];
+  datoRecibido: string = ''
+  constructor(private datosServ: DatosService) { }
+
+  ngOnInit() {
+    this.datos = this.datosServ.datos;
+    this.datosServ.datoEnviado.subscribe((dato) => {
+      this.datoRecibido = dato;
+    });
+  }
+
+  guardar(dato) {
+    this.datosServ.addDato(dato);
+  }
+}

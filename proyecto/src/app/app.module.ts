@@ -21,6 +21,9 @@ import { FiltroPipe } from './cmp-pipes/filtro.pipe';
 import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.component';
 import { MarcarDirective } from './cmp-directivas/marcar.directive';
 import { BlinkDirective } from './cmp-directivas/blink.directive';
+import { CmpServiciosComponent } from './cmp-servicios/cmp-servicios.component';
+import { CmpCComponent } from './cmp-servicios/cmp-c/cmp-c.component';
+import { CmpDComponent } from './cmp-servicios/cmp-d/cmp-d.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { BlinkDirective } from './cmp-directivas/blink.directive';
     FiltroPipe,
     CmpDirectivasComponent,
     MarcarDirective,
-    BlinkDirective
+    BlinkDirective,
+    CmpServiciosComponent,
+    CmpCComponent,
+    CmpDComponent
   ],
   imports: [
     BrowserModule,
