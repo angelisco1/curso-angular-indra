@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Meme } from '../meme';
 import { MemesService } from '../memes.service';
 
@@ -9,12 +9,13 @@ import { MemesService } from '../memes.service';
 })
 export class FormComponent implements OnInit {
   @Input() meme = new Meme()
+  @Output() reseteaMeme = new EventEmitter<boolean>();
   constructor(private memesServ: MemesService) { }
 
   ngOnInit() {
   }
   guardar() {
     this.memesServ.addMeme(this.meme);
-
+    this.reseteaMeme.emit(true);
   }
 }
