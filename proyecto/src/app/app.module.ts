@@ -24,6 +24,12 @@ import { BlinkDirective } from './cmp-directivas/blink.directive';
 import { CmpServiciosComponent } from './cmp-servicios/cmp-servicios.component';
 import { CmpCComponent } from './cmp-servicios/cmp-c/cmp-c.component';
 import { CmpDComponent } from './cmp-servicios/cmp-d/cmp-d.component';
+import { CmpRoutingComponent } from './cmp-routing/cmp-routing.component';
+import { InicioComponent } from './cmp-routing/inicio/inicio.component';
+import { NuevoUsuarioComponent } from './cmp-routing/nuevo-usuario/nuevo-usuario.component';
+import { MiRouterModule } from './cmp-routing/app.routes';
+import { UsuarioComponent } from './cmp-routing/usuario/usuario.component';
+import { EditarUsuarioComponent } from './cmp-routing/editar-usuario/editar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -48,11 +54,17 @@ import { CmpDComponent } from './cmp-servicios/cmp-d/cmp-d.component';
     BlinkDirective,
     CmpServiciosComponent,
     CmpCComponent,
-    CmpDComponent
+    CmpDComponent,
+    CmpRoutingComponent,
+    InicioComponent,
+    NuevoUsuarioComponent,
+    UsuarioComponent,
+    EditarUsuarioComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MiRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

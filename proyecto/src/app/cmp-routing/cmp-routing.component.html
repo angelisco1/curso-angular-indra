@@ -1,0 +1,20 @@
+<h2>Routing</h2>
+<button (click)="num = num + 1">{{num}}</button>
+<ul>
+  <li>
+    <a [routerLink]="['/']">Inicio</a>
+  </li>
+  <li>
+    <a [routerLink]="['/nuevo-usuario']">Nuevo Usuario</a>
+  </li>
+  <li>
+    <a [routerLink]="['/usuario', 1]">Usuario 1</a>
+  </li>
+  <li>
+    <a [routerLink]="['/usuario', 2]">Usuario 2</a>
+  </li>
+</ul>
+
+<p *ngIf="loading">Loading...</p>
+
+<router-outlet></router-outlet>
