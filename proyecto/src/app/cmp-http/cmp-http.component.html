@@ -1,0 +1,5 @@
+<h2>Observables y HTTP</h2>
+
+<input type="text" (change)="guardar($event.target.value)">
+
+<app-serie *ngFor="let seriePadre of series" [serie]="seriePadre"></app-serie>

@@ -1,0 +1,6 @@
+<div>
+  <p>{{serie.nombre}} ({{serie.id}})</p>
+  <button type="button" (click)="eliminar()">Eliminar</button>
+  <input type="text" [(ngModel)]="serie.nombre">
+  <button (click)="editar()">Editar</button>
+</div>

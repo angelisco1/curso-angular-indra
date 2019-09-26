@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+// import { HttpModule } from '@angular/http'; // Ya no existe en la versión de Angular8
 
 import { AppComponent } from './app.component';
 import { MiPrimerComponenteComponent } from './mi-primer-componente/mi-primer-componente.component';
@@ -30,6 +32,8 @@ import { NuevoUsuarioComponent } from './cmp-routing/nuevo-usuario/nuevo-usuario
 import { MiRouterModule } from './cmp-routing/app.routes';
 import { UsuarioComponent } from './cmp-routing/usuario/usuario.component';
 import { EditarUsuarioComponent } from './cmp-routing/editar-usuario/editar-usuario.component';
+import { CmpHttpComponent } from './cmp-http/cmp-http.component';
+import { SerieComponent } from './cmp-http/serie/serie.component';
 
 @NgModule({
   declarations: [
@@ -59,12 +63,15 @@ import { EditarUsuarioComponent } from './cmp-routing/editar-usuario/editar-usua
     InicioComponent,
     NuevoUsuarioComponent,
     UsuarioComponent,
-    EditarUsuarioComponent
+    EditarUsuarioComponent,
+    CmpHttpComponent,
+    SerieComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    MiRouterModule
+    MiRouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
